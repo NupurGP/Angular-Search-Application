@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="nameText" placeholder="Enter full name" />
+<button (click)="searchEmail()">Search Email</button>
+<h3>Email: {{ searchedEmail || 'Enter Name to search' }}</h3>
+<table border="1">
+  <tr *ngFor="let name of jsonMappingListKeys; let i = index">
+  <td>
+  {{i + 1}}
+  </td>
+  <td>
+    {{ name }}
+	</td>
+  </tr>
+</table>
